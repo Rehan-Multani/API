@@ -34,12 +34,12 @@ const Postdata = (async (req, res) => {
 
         // Save the Cloudinary image URL to the database
         const newImage = new File({
-            Title: req.body.Title,
-            Description: req.body.Description,
-            Price: req.body.Price,
-            Stock: req.body.Stock,
-            Category: req.body.Category,
-            Image: result.secure_url
+            title: req.body.title,
+            description: req.body.description,
+            price: req.body.price,
+            stock: req.body.stock,
+            category: req.body.category,
+            image: result.secure_url
         });
 
         let data = await newImage.save();
@@ -66,7 +66,7 @@ const Putdata = async (req, res) => {
                     price: req.body.price,
                     stock: req.body.stock,
                     category: req.body.category,
-                    Image: result.secure_url
+                    image: result.secure_url
                 }
             })
         res.status(200).json(data);
