@@ -61,11 +61,11 @@ const Putdata = async (req, res) => {
             { _id: req.params._id },
             {
                 $set: {
-                    Title: req.body.Title,
-                    Description: req.body.Description,
-                    Price: req.body.Price,
-                    Stock: req.body.Stock,
-                    Category: req.body.Category,
+                    title: req.body.title,
+                    description: req.body.description,
+                    price: req.body.price,
+                    stock: req.body.stock,
+                    category: req.body.category,
                     Image: result.secure_url
                 }
             })
