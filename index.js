@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/api", require('./Route'));
+app.use("/products", require('./Route'));
 
 
 app.listen(PORT, () => {
