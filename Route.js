@@ -13,8 +13,8 @@ const router = express.Router();
 router.get("/",GetAlldata)
 router.get("/:_id",Getdata)
 
-router.post("/",upload.single('Images'), Postdata)
-router.put("/:_id",upload.single('Images'),Putdata)
+router.post("/",upload.single('image'), Postdata)
+router.put("/:_id",upload.single('image'),Putdata)
 router.delete("/:id",DeleteData)
 
 module.exports = router;
