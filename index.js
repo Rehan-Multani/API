@@ -22,6 +22,7 @@ app.use(cookieParser());
 app.use("/products", require('./Route'));
 app.use("/reservation", require('./reservationroute'));
 app.use("/reward", require('./rewardRoute'));
+app.use("/api/order", require('./purcahseOrder/route'));
 
 
 
