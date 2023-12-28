@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const department = mongoose.Schema({
 
   
-    order_no: {
+    orderno: {
         type: String,
         required: true,
     },
-    order_date:
+    orderdate:
     {
         type: String,
         required: true,
@@ -17,7 +17,7 @@ const department = mongoose.Schema({
         type: String,
         required: true,
     },
-    purchasesales_account:
+    purchasesalesaccount:
     {
         type: String,
         required: true,
