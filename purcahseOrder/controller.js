@@ -24,7 +24,7 @@ const Postdata = async (req, res) => {
         const generatedID = `ORDER${(count + 1).toString().padStart(4, '0')}`;
 
         let dta = await db({
-            order_no:generatedID,
+            orderno:generatedID,
             ...req.body
         });
         let result = await dta.save();
