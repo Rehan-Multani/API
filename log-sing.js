@@ -43,7 +43,7 @@ app.post('/login', async (req, res) => {
     if (!validPassword) return res.status(400).send('Invalid email or password.');
 
     const token = jwt.sign({ _id: user._id }, 'dwegdehgehv');
-    res.send(token);
+    res.send({user,token});
 });
 
 const port = process.env.PORT || 4000;
