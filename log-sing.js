@@ -34,11 +34,11 @@ app.post('/signup', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ username });
-    if (!user) return res.status(400).send('Invalid username or password.');
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).send('Invalid email or password.');
 
     const validPassword = await bcrypt.compare(password, user.password);
-    if (!validPassword) return res.status(400).send('Invalid username or password.');
+    if (!validPassword) return res.status(400).send('Invalid email or password.');
 
     const token = jwt.sign({ _id: user._id }, 'dwegdehgehv');
     res.send(token);
